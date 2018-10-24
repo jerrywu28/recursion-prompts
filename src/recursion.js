@@ -57,10 +57,10 @@ var isEven = function(n) {
 var sumBelow = function(n) {
   let sum = n;
   if (n > 0) {
-    sum += sumBelow(n - 1);
+    sum += sumBelow(n - 1) - 1;
   }
   if (n < 0) {
-    sum += sumBelow(n + 1);
+    sum += sumBelow(n + 1) + 1;
   }
   return sum;
 };
