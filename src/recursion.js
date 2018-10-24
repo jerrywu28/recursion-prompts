@@ -26,7 +26,14 @@ var sum = function(array) {
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
   let sum = 0;
-  //base case:
+  array.forEach(element => {
+    if (!Array.isArray(element)) {
+      sum += element;
+    } else {
+      sum += arraySum(element);
+    }
+  })
+  return sum;
 };
 
 // 4. Check if a number is even.
