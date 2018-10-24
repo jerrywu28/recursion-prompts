@@ -26,16 +26,7 @@ var sum = function(array) {
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
   let sum = 0;
-  
-  array.forEach(function(element) {
-    if (Array.isArray(element)) {
-      sum = sum + arraySum(element);
-    } else {
-      sum = sum + element;
-    };
-  });
-
-  return sum;
+  //base case:
 };
 
 // 4. Check if a number is even.
@@ -57,13 +48,6 @@ var isEven = function(n) {
 // sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
-  if (n - 1 >= 0){
-    return (n-1) + sumBelow(n-1);
-  } else if (n + 1 <= 0){
-    return (n+1) + sumBelow(n+1);
-  } else {
-    return n;
-  }
 };
 
 // 6. Get the integers within a range (x, y).
